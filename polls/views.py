@@ -11,4 +11,9 @@ def home (request):
     context={"frontVar":backVar,"khaled": a,"List1":[1,2,3,4,5], 'data':data}
     return render (request,"index.html", context)
 
-
+def chart(request):
+    context = {
+        "labels" : [ "Student" + str(i+1) for i in range(6)],
+        "data" : [0, 0, 30, 50, 20, 30]
+                 }
+    return render(request, "chart.html", context)
