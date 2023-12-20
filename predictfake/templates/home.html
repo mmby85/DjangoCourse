@@ -1,0 +1,11 @@
+<h1>Welcome</h1>
+
+{{ news }}
+{% for article in news %}
+<div>
+    <h3> {{ article.id }}\  {{ article.keywords }} </h3>
+    <h3> {{ article.lang }} </h3>
+    <h3> {{ article.country }} </h3>
+
+</div>
+{% endfor %}

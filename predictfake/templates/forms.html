@@ -1,0 +1,23 @@
+{% comment %} <form action="" method="post">
+    
+    {% csrf_token %} 
+
+    <input type="text" name="text"> <br>
+    <input type="mail" name="mail"> <br>
+    <input type="password" name="password"> <br>
+    <input type="datetime" name="datetime"> <br>
+    <input type="number" name="number"> <br>
+    <input type="image" name="image"> <br>
+    <input type="file" name="file"> <br>
+    <input type="text" name="text"> <br>
+    <input type="submit" value="Fill">
+</form> {% endcomment %}
+
+<form action="" method="post">
+    
+    {% csrf_token %} 
+
+    {{forms}}
+    <input type="submit" value="Fill">
+
+</form>
