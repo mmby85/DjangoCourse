@@ -6,4 +6,7 @@ urlpatterns = [
     path("", views.index, name="index"),
     path("home", views.home),
     path("chart", views.chart),    
+    path("page/", views.page),    
+
 ]
+

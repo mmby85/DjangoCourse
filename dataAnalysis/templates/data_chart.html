@@ -1,0 +1,31 @@
+
+    <div style="height: 500px;">
+        <canvas id="myChart"></canvas>
+    </div>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <script>
+    const ctx = document.getElementById('myChart');
+    labels = {{labels|safe}}
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: labels ,
+        datasets: [{
+          label: "Sales of Laptop by Brands",
+          data: {{data|safe}},
+          borderWidth: 1,
+          backgroundColor: ["#F44336", "#4CAF50", "#2196F3", "#FF9800", "#E91E63", "#673AB7", "#FFFF00", "#00BCD4", "#C0CA3F", "#F4B400"]
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>

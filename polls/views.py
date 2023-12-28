@@ -4,6 +4,7 @@ from django.shortcuts import render
 
 def index(request):
     return HttpResponse("<h1>Hello, world. You're at the polls index.</h1>")
+
 def home (request):
     backVar="Hello"
     a="Je suis la plus belle et la plus intelligente"
@@ -17,3 +18,9 @@ def chart(request):
         "data" : [0, 0, 30, 50, 20, 30]
                  }
     return render(request, "chart.html", context)
+
+def page(request):
+    context = {
+        "earnings" : "140.000 $"
+    }
+    return render(request, "chart_page.html", context)
